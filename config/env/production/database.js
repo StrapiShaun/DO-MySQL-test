@@ -7,14 +7,14 @@ const { host, port, database, user, password } = parse(
 
 module.exports = ({ env }) => ({
     connection: {
-      client: 'mysql',
+      engine: 'mysql',
       connection: {
         host,
         port,
         database,
         user,
         password,
-        ssl: 'required'
+        //ssl: 'required'
       },
         debug: false,
     },
