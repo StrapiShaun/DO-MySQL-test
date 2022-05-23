@@ -6,9 +6,9 @@ let mysql = require('mysql');
 //   process.env.DATABASE_URL
 // );
 
-let connection = mysql.createConnection({
-    cluster_name
-});
+// let connection = mysql.createConnection({
+    
+// });
 
 // module.exports = ({ env }) => ({
 //     connection: {
