@@ -1,21 +1,13 @@
-//const mysql = require('mysql');
 const parse = require("pg-connection-string").parse;
 
 const { host, port, database, user, password } = parse(
   process.env.DATABASE_URL
- );
+);
 
-// const { host, port, database, user, password } = parse(
-//   process.env.DATABASE_URL
-// );
-
-// let connection = mysql.createConnection({
-    
-// });
 
 module.exports = ({ env }) => ({
-     connection: {
-       client: 'mysql',
+    connection: {
+      client: 'mysql',
       connection: {
         host,
         port,
@@ -28,4 +20,6 @@ module.exports = ({ env }) => ({
       },
       debug: false,
     },
-});
+  });
+
+
