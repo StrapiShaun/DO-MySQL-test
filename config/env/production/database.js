@@ -1,23 +1,28 @@
-const parse = require("pg-connection-string").parse;
+let mysql = require('mysql');
 
-const { host, port, database, user, password } = parse(
-  process.env.DATABASE_URL
-);
+//const parse = require("pg-connection-string").parse;
 
+// const { host, port, database, user, password } = parse(
+//   process.env.DATABASE_URL
+// );
 
-module.exports = ({ env }) => ({
-    connection: {
-      client: 'mysql',
-      connection: {
-        host,
-        port,
-        database,
-        user,
-        password,
-        ssl: {
-          rejectUnauthorized: false,
-        },
-      },
-      debug: false,
-    },
-  });
+let connection = mysql.createConnection({
+    cluster_name
+});
+
+// module.exports = ({ env }) => ({
+//     connection: {
+//       client: 'mysql',
+//       connection: {
+//         host,
+//         port,
+//         database,
+//         user,
+//         password,
+//         ssl: {
+//           rejectUnauthorized: false,
+//         },
+//       },
+//       debug: false,
+//     },
+//   });
