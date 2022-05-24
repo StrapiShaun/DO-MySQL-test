@@ -9,12 +9,12 @@ module.exports = ({ env }) => ({
     connection: {
        client: 'mysql',
        connection: {   
-        'ssl-mode': 'REQUIRED',
            user,
            password,
            database,
            host,
            port,
+           'ssl-mode': 'REQUIRED',
     },
       debug: false,
     }
