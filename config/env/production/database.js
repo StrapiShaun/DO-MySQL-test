@@ -5,7 +5,7 @@ const config =parse(process.env.DATABASE_URL);
 
 module.exports = ({ env }) => ({
   connection:{     
-    client: 'mysql',
+    client: config.client,
     connection: {   
       user: config.user,
       password: config.password,
