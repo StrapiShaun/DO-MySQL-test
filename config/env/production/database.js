@@ -3,6 +3,7 @@ const knex = require('knex')({client: 'mysql'})
 const config =parse(process.env.DATABASE_URL);
 
 
+
 module.exports = ({ env }) => ({
   connection:{     
     client: "mysql",
