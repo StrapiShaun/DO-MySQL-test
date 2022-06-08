@@ -1,6 +1,6 @@
 const parse = require("pg-connection-string").parse;
-//const knex = require('knex')({client: 'MySQL'})
-const config =parse(process.env.DATABASE_URL);
+const knex = require('knex')({client: 'mysql'});
+//const config =parse(process.env.DATABASE_URL);
 
 
 
