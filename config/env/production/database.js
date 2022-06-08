@@ -5,7 +5,7 @@ const knex = require('knex')({client: 'mysql'});
 
 
 module.exports = ({ env }) => ({
-  connection:{  
+  
   client: 'mysql',
   connection: {
     host,
@@ -19,7 +19,7 @@ module.exports = ({ env }) => ({
   
   debug: false,
 },
-},
+
 });
 
 
