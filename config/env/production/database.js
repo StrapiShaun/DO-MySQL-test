@@ -1,4 +1,4 @@
-console.log('DATABASE_URL');
+console.log(DATABASE_URL);
 
 const parse = require("pg-connection-string").parse;
 
