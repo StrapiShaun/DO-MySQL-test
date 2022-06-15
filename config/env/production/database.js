@@ -5,8 +5,8 @@ const config =parse(process.env.DATABASE_URL);
 //const knex = require('knex');
 //knex.client = 'mysql';
 module.exports = ({ env }) => ({
- 
-   mysql: 'mysql',
+ connection: {
+   client: 'mysql',
   // connection: process.env.DATABASE_URL,
   // searchPath: 'knex,public',
   // pool: { min: 0, max: 7 }
@@ -23,6 +23,7 @@ module.exports = ({ env }) => ({
     },
   
   debug: false,
+},
 },
 
 });
